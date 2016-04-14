@@ -22,33 +22,33 @@ function randomPlay() {
 ////////////////////////////////////////////////
 
 function getPlayerMove(move) {
-     move = getInput;
+     
      // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return move || null ;
+    return move || getInput;
 }
 
-function getComputerMove(move) {
-     move = randomPlay;
+function getComputerMove() {
+     
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return move || null;
+    return move || randomPlay();
 }
 
-function getWinner(playerMove,computerMove) {
+function getWinner() {
     var winner;
-    if (PlayerMove === ComputerMove){
+    if (getPlayerMove === getComputerMove){
         winner = 'tie';
     }
-    else if (PlayerMove === 'rock' && ComputerMove === 'scissors'){
+    else if (getPlayerMove === 'rock' && getComputerMove === 'scissors'){
         winner = 'player';
     }
-    else if(PlayerMove === 'paper' && ComputerMove === 'rock'){
+    else if(getPlayerMove === 'paper' && getComputerMove === 'rock'){
         winner = 'player';
     }
-    else if (PlayerMove === 'scissors' && ComputerMove === 'paper'){
+    else if (getPlayerMove === 'scissors' && getComputerMove === 'paper'){
         winner = 'player';
     }
     else {
@@ -61,12 +61,31 @@ function getWinner(playerMove,computerMove) {
     return winner;
 }
 
+
 function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
-    /* YOUR CODE HERE */
+      // This function should continue to play Rock Paper Scissors until either the
+  // player or the computer has won five times.
+  // After each 'round', display some text in the console indicating who played
+  // what, who won, and what the current scoreboard looks like.
+  // For example,
+  //  console.log('Player chose ' + playerMove + ' while Computer chose ' + computerMove);
+  //  console.log('The score is currently ' + playerWins + ' to ' + computerWins + '\n');
     return [playerWins, computerWins];
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
